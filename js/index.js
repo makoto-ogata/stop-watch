@@ -1,10 +1,10 @@
-var start = document.getElementById('start');
+var action = document.getElementById('action');
 var message = 'ボタンを押しました';
 var number = document.getElementById('number');
 var count = 0;
 
 
-start.onclick = function(){
+action.onclick = function(){
 	countUp();
 }
 
