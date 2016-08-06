@@ -9,8 +9,13 @@
 	border: solid 1px #ccc;
 	border-radius: 4px;
 	background-color: #000;
-	padding: 3px 10px;
 	color: #fff;
 	text-align: right;
-	font-size: 20px;
+	font-size: 15px;
+	vertical-align: middle;
+}
+
+.number-area > p {
+	display:inline;
+	padding: 15px 10px;
 }
