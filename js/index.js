@@ -1,3 +1,10 @@
 var start = document.getElementById('start');
-start.click('クリックされました');
+var message = 'ボタンを押しました';
 
+start.onclick = function(){
+	alertFuncton();
+}
+
+function alertFuncton (){
+	alert(message);
+}
