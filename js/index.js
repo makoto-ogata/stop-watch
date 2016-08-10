@@ -1,7 +1,7 @@
 var action = document.getElementById('action');
 var number = document.getElementById('number');
 var reset = document.getElementById('reset');
-var count = 0;
+var count = 1;
 var btnText = 0;
 
 action.onclick = function(){
@@ -23,5 +23,6 @@ reset.onclick = function() {
 
 var countUp = function(){
 	$(number).text(count);
+	console.log('count: ' + count);
 	count++;
 }
