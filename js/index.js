@@ -8,7 +8,6 @@ action.onclick = function(){
 	if (btnText == 0){
 		$(action).text('ストップ');
 		btnText = 1;
-		count = 1;
 		myInterval = setInterval(countUp ,1000);
 	} else {
 		btnText = 0;
@@ -23,7 +22,7 @@ reset.onclick = function() {
 }
 
 var countUp = function(){
+	count++;
 	$(number).text(count);
 	console.log('count: ' + count);
-	count++;
 }
