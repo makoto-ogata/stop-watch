@@ -1,10 +1,28 @@
-var start = document.getElementById('start');
-var message = 'ボタンを押しました';
+var action = document.getElementById('action');
+var number = document.getElementById('number');
+var reset = document.getElementById('reset');
+var count = 0;
+var btnText = 0;
 
-start.onclick = function(){
-	alertFuncton();
+action.onclick = function(){
+	if (btnText == 0){
+		$(action).text('ストップ');
+		btnText = 1;
+		myInterval = setInterval(countUp ,1000);
+	} else {
+		btnText = 0;
+		$(action).text('スタート');
+		clearInterval(myInterval);
+	}
 }
 
-function alertFuncton (){
-	alert(message);
+reset.onclick = function() {
+	$(number).text(0);
+	count = 0;
+}
+
+var countUp = function(){
+	count++;
+	$(number).text(count);
+	console.log('count: ' + count);
 }
