@@ -7,11 +7,13 @@ action.onclick = function(){
 	if (btnText == 0){
 		$('#action').text('ストップ');
 		$('#reset').text('ラップ');
+		reset.id = 'lap';
 		btnText = 1;
 		myInterval = setInterval(countUp ,1000);
 	} else {
 		btnText = 0;
 		$('#action').text('スタート');
+		reset.id = 'reset';
 		$('#reset').text('リセット');
 		clearInterval(myInterval);
 
