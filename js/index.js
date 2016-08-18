@@ -14,12 +14,13 @@ action.onclick = function(){
 		$('#action').text('スタート');
 		$('#reset').text('リセット');
 		clearInterval(myInterval);
-	}
-}
 
-reset.onclick = function() {
-	$(number).text(0);
-	count = 0;
+		reset.onclick = function() {
+			$(number).text(0);
+			count = 0;
+			$('#reset').text('ラップ');
+		}
+	}
 }
 
 var countUp = function(){
