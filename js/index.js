@@ -1,4 +1,4 @@
-var number = document.getElementById('number');
+var number = document.getElementsByClassName('number');
 var count = 0;
 var btnText = 0;
 
