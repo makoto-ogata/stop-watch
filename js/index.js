@@ -1,29 +1,25 @@
 var number = document.getElementById('number');
-var reset = document.getElementById('reset');
 var count = 0;
 var btnText = 0;
 
-action.onclick = function(){
+$('#left-button').on('click', function(){
 	if (btnText == 0){
-		$('#action').text('ストップ');
-		$('#reset').text('ラップ');
-		reset.id = 'lap';
+		$('#left-button').text('ストップ');
+		$('#right-button').text('ラップ');
 		btnText = 1;
 		myInterval = setInterval(countUp ,1000);
 	} else {
 		btnText = 0;
-		$('#action').text('スタート');
-		reset.id = 'reset';
-		$('#reset').text('リセット');
+		$('#left-button').text('スタート');
+		$('#right-button').text('リセット');
 		clearInterval(myInterval);
 
-		reset.onclick = function() {
+		$('#right-button').on('click',function() {
 			$(number).text(0);
 			count = 0;
-			$('#reset').text('ラップ');
-		}
+		});
 	}
-}
+});
 
 var countUp = function(){
 	count++;
