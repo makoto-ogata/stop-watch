@@ -8,6 +8,10 @@ $('#left-button').on('click', function(){
 		$('#right-button').text('ラップ');
 		btnText = 1;
 		myInterval = setInterval(countUp ,1000);
+
+		$('#right-button').on('click',function() {
+				$('.lap-time-addArea').append('<p class="underline-text">'+count+'</p>');
+		});
 	} else {
 		btnText = 0;
 		$('#left-button').text('スタート');
@@ -17,6 +21,7 @@ $('#left-button').on('click', function(){
 		$('#right-button').on('click',function() {
 			$(number).text(0);
 			count = 0;
+			$('.lap-time-addArea').empty();
 		});
 	}
 });
