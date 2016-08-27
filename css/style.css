@@ -31,3 +31,11 @@
 	padding-bottom: 3px;
 	font-size: 13px;
 }
+
+.btn {
+	display: none;
+}
+
+.btn.active {
+	display: inline-block;
+}
