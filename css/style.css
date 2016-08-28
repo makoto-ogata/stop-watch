@@ -39,3 +39,7 @@
 .btn.active {
 	display: inline-block;
 }
+
+.lap-time-last {
+	display: none;
+}
