@@ -28,15 +28,17 @@ $('.reset').on('click', function(){
 $('.lap').on('click', function(){
 		$(this).data('click', clickNum++); //クリックされた回数
 		var clickCount = $(this).data('click');
-		var lapCount = count;
+		//console.log(clickCount);
 
-		if(clickCount > 0){
+		if(clickCount == 0){
 			$('.lap-time-addArea').append('<p class="underline-text">'+ count +'</p>');
 		}else{
 			lapTime = count - lapCount;
 			$('.lap-time-addArea').append('<p class="underline-text">'+ lapTime +'</p>');
 		}
+		lapCount = count;
 });
+
 
 var countUp = function(){
 	count++;
