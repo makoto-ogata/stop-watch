@@ -1,11 +1,11 @@
-var number = document.getElementsByClassName('number');
-var count = 0;
-var clickNum = 0;
+var count = 0; //変数countに0を代入
+var lapCount = 0;
 
 $('.start').on('click', function(){
 		myInterval = setInterval(countUp ,1000);
 		$(this).removeClass('active');
 		$('.stop').addClass('active');
+		$('.lap').prop('disabled', false);
 });
 
 $('.stop').on('click', function(){
@@ -18,30 +18,23 @@ $('.stop').on('click', function(){
 
 
 $('.reset').on('click', function(){
-		$(number).text(0);
+		$('.number').text(0);
 		count = 0;
 		$('.lap-time-addArea').empty();
 		$(this).removeClass('active');
 		$('.lap').addClass('active');
+		$('.lap').prop('disabled', true);
 });
 
 $('.lap').on('click', function(){
-		$(this).data('click', clickNum++); //クリックされた回数
-		var clickCount = $(this).data('click');
-		//console.log(clickCount);
-
-		if(clickCount == 0){
-			$('.lap-time-addArea').append('<p class="underline-text">'+ count +'</p>');
-		}else{
-			lapTime = count - lapCount;
-			$('.lap-time-addArea').append('<p class="underline-text">'+ lapTime +'</p>');
-		}
+		var lapTime = count - lapCount;
+		$('.lap-time-addArea').append('<p class="underline-text">'+ lapTime +'</p>');
 		lapCount = count;
 });
 
 
 var countUp = function(){
 	count++;
-	$(number).text(count);
+	$('.number').text(count);
 	//console.log('count: ' + count);
 }
