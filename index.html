@@ -1,21 +1,29 @@
 <!DOCTYPE html>
 <html lang="ja">
-<head>
-	<meta charset="UTF-8">
-	<link rel="stylesheet" href="css/style.css">
-	<script src="js/jquery-3.1.0.min.js" ></script>
-	<title>Stop Watch</title>
-</head>
-<body>
-	<div class="wrap">
-		<div class="number-area">
-			<p id="number">0</p>
+	<head>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" href="css/style.css">
+		<script src="js/jquery-3.1.0.min.js" ></script>
+		<title>Stop Watch</title>
+	</head>
+	<body>
+		<div class="wrap">
+			<div class="lap-time">
+				<p class="number">0</p>
+			</div>
+			<div class="number-area">
+				<p class="number">0</p>
+			</div>
+			<div class="btn-list">
+				<button class="btn start active" type="button">スタート</button>
+				<button class="btn stop" type="button">ストップ</button>
+				<button class="btn lap active" type="button" disabled="disbled">ラップ</button>
+				<button class="btn reset" type="button">リセット</button>
+			</div>
+			<div class="lap-time-addArea">
+				<p class="lap-time-last"></p>
+			</div>
 		</div>
-		<div class="btn-list">
-			<button id="action" type="button">スタート</button>
-			<button id="reset" type="button">リセット</button>
-		</div>
-	</div>
-	<script src="js/index.js"></script>
-</body>
+		<script src="js/index.js"></script>
+	</body>
 </html>
