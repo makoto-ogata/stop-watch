@@ -2,7 +2,7 @@ var count = 0; //変数countに0を代入
 var lapCount = 0;
 
 $('.start').on('click', function(){
-		myInterval = setInterval(countUp ,1000);
+		myInterval = setInterval(countUp ,10);
 		$(this).removeClass('active');
 		$('.stop').addClass('active');
 		$('.lap').prop('disabled', false);
@@ -35,6 +35,6 @@ $('.lap').on('click', function(){
 
 var countUp = function(){
 	count++;
-	$('.number').text(count);
+	$('.number').text(count / 100);
 	//console.log('count: ' + count);
 }
